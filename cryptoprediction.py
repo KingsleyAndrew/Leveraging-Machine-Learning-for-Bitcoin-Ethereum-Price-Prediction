@@ -9,6 +9,7 @@ Created on Mon Jun 23 09:41:20 2025
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from IPython.display import display
 
 # Load the datasets
 eth_data = pd.read_csv('ethereum.csv')
@@ -19,7 +20,6 @@ eth_data["date"] = pd.to_datetime(eth_data["date"])
 btc_data["Date"] = pd.to_datetime(btc_data["Date"])
 
 # View first 5 rows of both datasets
-from IPython.display import display
 display(btc_data.head(5))
 display(eth_data.head(5))
 
@@ -114,7 +114,6 @@ import numpy as np
 btc_features = ['Open', 'High', 'Low', 'Close']
 eth_features = ['Open', 'High', 'Low', 'Close']
 target = 'Target'
-
 
 
 # Split data into training and testing sets (80% train, 20% test)
